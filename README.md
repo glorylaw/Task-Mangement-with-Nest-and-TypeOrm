@@ -21,7 +21,10 @@ $ yarn start:dev
 
 ```
 
-Once the above is done and your app is running,Here is the postman documentation to test each of the endpoints provided.I could not provide a postman doc because of some postman error,but the below documentation will direct you on how to go about testing
+Once the above is done and your app is running,Here is the postman documentation to test each of the endpoints provided.
+
+Here is the postman doc url https://documenter.getpostman.com/view/28086042/2sA3QnhDcg
+
 
 SignUp: The url is http://localhost:3000/auth/signin This is a post request
 the body is {
