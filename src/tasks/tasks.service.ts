@@ -51,13 +51,15 @@ import { TasksGateway } from './tasks.gateway';
         return task
         }
 
-        async  deleteTask(id:string): Promise<void>{
+        async  deleteTask(id:string): Promise<{message:string , statusCode:string}>{
         const result = await this.taskRepository.delete(id)
 
         if(result.affected === 0){
             throw new NotFoundException(`Task with ${id} not found`);
         }
         this.tasksGateway.emitTaskDeleted(id);
+
+        return {message:`You have successfully deleted task with id ${id} `,statusCode:"200"}
     }
 
        async  updateTaskStatus(id:string, status:TaskStatus): Promise<Task>{
